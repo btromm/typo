@@ -2,7 +2,7 @@
 
 <div class="header">
 
-    {{ if or (not (.Param "hideHeader")) .IsHome }}
+    {{ if or (not (.IsPage)) (not (eq .Section "posts")) .IsHome }}
 
     <h1 class="header-title">
         <a href="{{ site.BaseURL }}">{{ site.Title }}</a>
